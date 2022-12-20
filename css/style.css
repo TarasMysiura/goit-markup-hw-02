@@ -7,9 +7,9 @@
   --color-text: #434455;
   --color-btn-defult: #4d5ae5;
   --color-btn-active: #404bbf;
-  --color-light: #F4F4FD;
-  --color-accent: #E7E9FC;
-
+  --color-light: #f4f4fd;
+  --color-accent: #e7e9fc;
+  --color-white: #ffffff;
 }
 
 .visually-hidden {
@@ -28,7 +28,7 @@
 body {
   font-family: "Roboto", sans-serif;
   color: var(--color-text);
-  background-color: #ffffff;
+  background-color: var(--color-white);
 }
 
 .list {
@@ -41,7 +41,7 @@ body {
 
 /*------------HEADER------------------*/
 .header {
-  background: #ffffff;
+  background: var(--color-white);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -62,7 +62,7 @@ body {
   color: var(--color-style-logo);
 }
 
-.navigation-link {
+.navigation .link {
   font-weight: var(--font-weight-roboto-500);
   font-size: 16px;
   line-height: 1.5;
@@ -70,26 +70,27 @@ body {
   color: var(--color-title);
 }
 
-.contacts-email,
-.contacts-tel {
+.contacts .email,
+.contacts .tel {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-text);
 }
 
-.navigation-link:hover,
-.contacts-email:hover,
-.contacts-tel:hover,
-.navigation-link:focus,
-.contacts-email:focus,
-.contacts-tel:focus {
-  color: var(--color-text);
+.navigation .link:hover,
+.contacts .email:hover,
+.contacts .tel:hover,
+.navigation .link:focus,
+.link.current,
+.contacts .email:focus,
+.contacts .tel:focus {
+  color: var(--color-accent);
 }
 
-.navigation-link:active,
-.contacts-email:active,
-.contacts-tel:active {
+.navigation .link:active,
+.contacts .email:active,
+.contacts .tel:active {
   color: var(--color-btn-defult);
 }
 
@@ -97,20 +98,21 @@ body {
 
 /*------------HERO------------------*/
 .hero {
-  background: var(--color-title);
+  background-color: var(--color-title);
 }
 
-.hero-title {
+.hero .title {
   font-weight: var(--font-weight-roboto-500);
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
-.hero-btn {
-  background: var(--color-btn-defult);
+.hero .btn {
+  font-family: inherit;
+  background-color: var(--color-btn-defult);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-weight: var(--font-weight-roboto-500);
@@ -119,16 +121,18 @@ body {
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: var(--color-white);
   cursor: pointer;
 }
 
-.hero-btn:active {
-  background: var(--color-btn-active);
+.hero .btn:active {
+  background-color: var(--color-btn-active);
 }
 /*------------PREFERENCE------------------*/
 /*------------WHAT ARE WE GOING------------------*/
-.section-title {
+.preference .title,
+.doing .title,
+.team .title {
   font-weight: var(--font-weight-roboto-500);
   font-size: 36px;
   line-height: 1.11;
@@ -137,14 +141,14 @@ body {
   text-transform: capitalize;
   color: var(--color-title);
 }
-.section-title-h3 {
+.title-h3 {
   font-weight: var(--font-weight-roboto-500);
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--color-title);
 }
-.section-text {
+.text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -164,7 +168,7 @@ body {
 }
 
 .footer {
-  background: #2e2f42;
+  background-color: var(--color-title);
 }
 
 .footer-logo {
@@ -189,8 +193,9 @@ body {
 
 /*------------PORTFOLIO------------------*/
 .btn {
-  background: var(--color-light);
-  border: 1px solid #E7E9FC;
+  font-family: inherit;
+  background-color: var(--color-light);
+  border: 1px solid var(--color-accent);
   border-radius: 4px;
   font-weight: var(--font-weight-roboto-500);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -203,8 +208,18 @@ body {
   color: var(--color-btn-defult);
   cursor: pointer;
 }
-.btn:active {
-  background: var(--color-btn-active);  
-  color: #ffffff;
+.btn:hover,
+.btn.tel:focus {
+  background-color: var(--color-btn-defult);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  color: var(--color-white);
+  border-color: var(--color-btn-defult);
 }
+
+.btn:active {
+  background-color: var(--color-btn-active);
+  color: var(--color-white);
+}
+
 /*--------GALLERY---------*/
