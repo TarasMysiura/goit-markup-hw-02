@@ -46,7 +46,8 @@ body {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.header-logo {
+.header .logo,
+.footer .logo {
   font-family: var(--font-family-logo);
   font-weight: 800;
   font-size: 18px;
@@ -58,8 +59,8 @@ body {
   color: var(--color-title);
 }
 
-.header-logo-span {
-  color: var(--color-style-logo);
+.logo-span {
+  color: var(--color-style-logo);  
 }
 
 .navigation .link {
@@ -84,10 +85,7 @@ body {
 .navigation .link:focus,
 .link.current,
 .contacts .email:focus,
-.contacts .tel:focus {
-  color: var(--color-accent);
-}
-
+.contacts .tel:focus, 
 .navigation .link:active,
 .contacts .email:active,
 .contacts .tel:active {
@@ -141,7 +139,7 @@ body {
   text-transform: capitalize;
   color: var(--color-title);
 }
-.title-h3 {
+.list .title {
   font-weight: var(--font-weight-roboto-500);
   font-size: 20px;
   line-height: 1.2;
@@ -159,11 +157,11 @@ body {
   background: var(--color-light);
 }
 
-.team-name {
+.team .name {
   text-align: center;
 }
 
-.team-text {
+.team .text {
   text-align: center;
 }
 
@@ -171,23 +169,12 @@ body {
   background-color: var(--color-title);
 }
 
-.footer-logo {
-  font-family: var(--font-family-logo);
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.17;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+.footer .logo {
+  line-height: 1.17;  
   color: var(--color-light);
 }
 
-.footer-logo-span {
-  color: var(--color-style-logo);
-}
-
-.footer-text {
+.footer .text {
   color: var(--color-accent);
 }
 
